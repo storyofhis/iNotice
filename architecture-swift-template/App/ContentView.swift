@@ -13,17 +13,9 @@ struct ContentView: View {
     let container: AppContainer
 
     var body: some View {
-        TabView {
-            Tab("Weather", systemImage: "cloud.sun.fill") {
-                NavigationStack {
-                    HomeView(viewModel: HomeViewModel(container: container))
-                }
-            }
-
-            Tab("Components", systemImage: "square.grid.2x2") {
-                NavigationStack {
-                    ComponentsGalleryView(container: container)
-                }
+        NavigationView {
+            NavigationStack {
+                ScheduleView(viewModel: ScheduleViewModel())
             }
         }
     }
