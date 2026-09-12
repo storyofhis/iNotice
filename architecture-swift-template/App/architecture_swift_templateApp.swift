@@ -15,6 +15,7 @@ struct architecture_swift_templateApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(container: container)
+                .preferredColorScheme(.dark)
         }
     }
 }
